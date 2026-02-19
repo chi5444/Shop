@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر اللياقة البدنية | Abdou Fitness</title>
+    <title>متجر اللياقة البدنية | Fitness Shop</title>
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
@@ -566,7 +566,7 @@
 
     <!-- Navbar -->
     <nav>
-        <h1>💪 Abdou Fitness</h1>
+        <h1>💪 Fitness Shop</h1>
         <div class="nav-links">
             <a href="#home">الرئيسية</a>
             <a href="#products">المنتجات</a>
@@ -603,7 +603,7 @@
             <!-- Product 1 -->
             <div class="card" data-category="equipment">
                 <div class="card-content">
-                    <img src="images/image1.jpg" alt="أحذية رياضية">
+                    <img src="https://via.placeholder.com/280x250/1a1a1a/00ff88?text=🏃+احذية+رياضية" alt="أحذية رياضية">
                     <h3>أحذية رياضية احترافية</h3>
                     <p class="description">أحذية رياضية عالية الجودة مثالية للجري والتمارين</p>
                     <div class="rating">⭐⭐⭐⭐⭐</div>
@@ -622,7 +622,7 @@
             <!-- Product 2 -->
             <div class="card" data-category="accessories">
                 <div class="card-content">
-                    <img src="images/image2.jpg" alt="قفازات تمرين">
+                    <img src="https://via.placeholder.com/280x250/1a1a1a/00ff88?text=🧤+قفازات+تمرين" alt="قفازات تمرين">
                     <h3>قفازات تمرين احترافية</h3>
                     <p class="description">قفازات مريحة توفر حماية ممتازة لليدين</p>
                     <div class="rating">⭐⭐⭐⭐⭐</div>
@@ -640,7 +640,7 @@
             <!-- Product 3 -->
             <div class="card" data-category="supplements">
                 <div class="card-content">
-                    <img src="images/image3.jpg" alt="بروتين واي">
+                    <img src="https://via.placeholder.com/280x250/1a1a1a/00ff88?text=💪+بروتين+واي" alt="بروتين واي">
                     <h3>بروتين واي بريميوم</h3>
                     <p class="description">بروتين عالي الجودة لبناء العضلات بسرعة</p>
                     <div class="rating">⭐⭐⭐⭐⭐</div>
@@ -659,7 +659,7 @@
             <!-- Product 4 -->
             <div class="card" data-category="equipment">
                 <div class="card-content">
-                    <img src="images/image4.jpg" alt="أوزان حرة">
+                    <img src="https://via.placeholder.com/280x250/1a1a1a/00ff88?text=🏋️+اوزان+حرة" alt="أوزان حرة">
                     <h3>طقم أوزان حرة</h3>
                     <p class="description">مجموعة كاملة من الأوزان للتمارين المنزلية</p>
                     <div class="rating">⭐⭐⭐⭐</div>
@@ -677,7 +677,7 @@
             <!-- Product 5 -->
             <div class="card" data-category="accessories">
                 <div class="card-content">
-                    <img src="images/image5.jpg" alt="ملابس رياضية">
+                    <img src="https://via.placeholder.com/280x250/1a1a1a/00ff88?text=🎽+ملابس+رياضية" alt="ملابس رياضية">
                     <h3>طقم ملابس رياضية</h3>
                     <p class="description">ملابس عصرية ومريحة للتمارين الرياضية</p>
                     <div class="rating">⭐⭐⭐⭐⭐</div>
@@ -696,7 +696,7 @@
             <!-- Product 6 -->
             <div class="card" data-category="supplements">
                 <div class="card-content">
-                    <img src="images/image6.jpg" alt="مشروب طاقة">
+                    <img src="https://via.placeholder.com/280x250/1a1a1a/00ff88?text=⚡+طاقة" alt="مشروب طاقة">
                     <h3>مشروب طاقة طبيعي</h3>
                     <p class="description">مشروب طاقة صحي لتعزيز الأداء الرياضي</p>
                     <div class="rating">⭐⭐⭐⭐</div>
@@ -747,15 +747,15 @@
         <div class="contact-info">
             <div class="contact-item">
                 <span>✉️</span>
-                <a href="mailto:abdelazizkriaa@icloud.com">abdelazizkriaa@icloud.com</a>
+                <a href="mailto:fitness@email.com">fitness@email.com</a>
             </div>
             <div class="contact-item">
                 <span>📱</span>
-                <a href="https://wa.me/21696672771">+216 96 672 771</a>
+                <a href="https://wa.me/21612345678">+216 XX XXX XXX</a>
             </div>
             <div class="contact-item">
                 <span>📍</span>
-                <span>sfax</span>
+                <span>تونس العاصمة</span>
             </div>
         </div>
         <div class="social-links">
@@ -768,7 +768,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Abdou Fitness. جميع الحقوق محفوظة.</p>
+        <p>© 2026 Fitness Shop. جميع الحقوق محفوظة.</p>
     </footer>
 
     <!-- Cart Modal -->
@@ -863,17 +863,87 @@
             let cart = JSON.parse(localStorage.getItem("cart")) || [];
             if (cart.length === 0) return;
             
-            let message = 'مرحباً! أريد طلب المنتجات التالية:%0A%0A';
+            // Show order form
+            showOrderForm();
+        }
+
+        function showOrderForm() {
+            const modal = document.getElementById('cartModal');
+            const cartContent = document.querySelector('.cart-content');
+            
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
             let total = 0;
+            let orderDetails = '';
             
             cart.forEach(item => {
-                message += `• ${item.name} - ${item.price} دت%0A`;
                 total += item.price;
+                orderDetails += `${item.name} - ${item.price} دت\n`;
             });
             
-            message += `%0Aالمجموع: ${total} دت`;
-            
-            window.open(`https://wa.me/21696672771?text=${message}`, '_blank');
+            cartContent.innerHTML = `
+                <div class="cart-header">
+                    <h2>📋 إتمام الطلب</h2>
+                    <button class="close-cart" onclick="toggleCart()">✖️</button>
+                </div>
+                <form action="https://formsubmit.co/servicekriaa@gmail.com" method="POST" style="padding: 1rem;">
+                    <input type="hidden" name="_subject" value="طلب جديد من Fitness Shop">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">الاسم الكامل *</label>
+                        <input type="text" name="name" required 
+                            style="width: 100%; padding: 0.8rem; border: 2px solid rgba(0, 255, 136, 0.3); 
+                            background: var(--dark); color: white; border-radius: 10px; font-family: Cairo;">
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">رقم الهاتف *</label>
+                        <input type="tel" name="phone" required 
+                            style="width: 100%; padding: 0.8rem; border: 2px solid rgba(0, 255, 136, 0.3); 
+                            background: var(--dark); color: white; border-radius: 10px; font-family: Cairo;">
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">البريد الإلكتروني *</label>
+                        <input type="email" name="email" required 
+                            style="width: 100%; padding: 0.8rem; border: 2px solid rgba(0, 255, 136, 0.3); 
+                            background: var(--dark); color: white; border-radius: 10px; font-family: Cairo;">
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">العنوان الكامل *</label>
+                        <textarea name="address" required rows="3"
+                            style="width: 100%; padding: 0.8rem; border: 2px solid rgba(0, 255, 136, 0.3); 
+                            background: var(--dark); color: white; border-radius: 10px; font-family: Cairo; resize: vertical;"></textarea>
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">المنتجات المطلوبة:</label>
+                        <textarea name="order" readonly rows="6"
+                            style="width: 100%; padding: 0.8rem; border: 2px solid rgba(0, 255, 136, 0.3); 
+                            background: var(--darker); color: var(--primary); border-radius: 10px; font-family: Cairo;">${orderDetails}
+━━━━━━━━━━━━━━━━
+المجموع الكلي: ${total} دت</textarea>
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">ملاحظات إضافية (اختياري)</label>
+                        <textarea name="notes" rows="3"
+                            style="width: 100%; padding: 0.8rem; border: 2px solid rgba(0, 255, 136, 0.3); 
+                            background: var(--dark); color: white; border-radius: 10px; font-family: Cairo; resize: vertical;"
+                            placeholder="أي ملاحظات أو طلبات خاصة..."></textarea>
+                    </div>
+                    
+                    <button type="submit" style="width: 100%; padding: 1.2rem; font-size: 1.1rem;">
+                        إرسال الطلب 📧
+                    </button>
+                    
+                    <p style="text-align: center; color: var(--text-gray); font-size: 0.9rem; margin-top: 1rem;">
+                        سيتم إرسال طلبك مباشرة وسنتواصل معك قريباً
+                    </p>
+                </form>
+            `;
         }
 
         // Filter Products
